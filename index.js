@@ -5,10 +5,8 @@ let menuBtn = document.querySelector(".btn_menu")
 let userBtn = document.querySelector(".user_icon")
 let publictype = document.querySelector(".public_type")
 
-addBtn.addEventListener("click", addModalBoard)
-// menuBtn.addEventListener("click", addModalMenu())
-// userBtn.addEventListener("click", addModalUser())
-// trelloName.addEventListener("change",()=>changeTrelloName())
+addBtn.addEventListener("click", ()=>addModalBoard())
+menuBtn.addEventListener("click", ()=>removeAll())
 
 
 let boardArr=[]
@@ -30,6 +28,7 @@ boardArr.push(board)
 boardId++
 exitModal()
 console.log(boardArr)
+addToLocalStorage("board");
 }
 
 
@@ -112,7 +111,6 @@ function addBoardItemModal(boardId){
     btnCanc=document.querySelector(".cancel_item_btn")
     btnAdd.addEventListener('click', () => createBoardItem(boardId, document.querySelector(".input_board_card_name_lab").value,document.querySelector(".input_board_text").value))    
     btnCanc.addEventListener('click', () => exitModal()) 
-
 }
 function createBoardItem(boardId,title,text){    
     const boardItem = {
@@ -124,7 +122,8 @@ function createBoardItem(boardId,title,text){
     addBoardItem(boardItem);   
     boardItemArr.push(boardItem);
     itemId++
-
+    addToLocalStorage("item");
+    addToLocalStorage("board");
 }
 
 
@@ -153,6 +152,23 @@ function exitModal(){
     }
 }
 
+function removeAll(){
+    document.querySelector(".board").remove(".board")
+}
 
-let funcBtn=document.querySelector(".add_board_item")
-    funcBtn.addEventListener('click', () => addBoardItemModal(element.id)) 
+let addToLocalStorage = (type) =>{
+    switch (type) {                                                                     
+        case 'item':
+            localStorage.setItem('boardItemArr', JSON.stringify(boardItemArr));
+            localStorage.setItem('itemId', JSON.stringify(itemId))
+            break;
+        case 'board':
+            localStorage.setItem('boardId', JSON.stringify(boardId))
+            localStorage.setItem('boardArr', JSON.stringify(boardArr));
+        default:
+
+            break;
+    }
+    
+}
+
