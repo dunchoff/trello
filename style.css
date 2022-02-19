@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color:azure
+}
+.header_inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: aqua;
+}
+
+.header_item{
+    height: 40px;
+    background-color:bisque;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.board_name{
+    padding: 0 10px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn{
+    color: blueviolet;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px;
+}
+.public_type{
+    padding: 0 10px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.user_icon{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    width: 120px;
+}
+
+.user_icon> img{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+
+}
+.board_inner{
+    display: flex;
+    margin: 20px;
+}
+.modal_window{
+    position: absolute;
+    background-color: beige;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+.modal_title{
+    color: #fff;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.input_board_name{
+    resize: none;
+    margin-top: 10px;
+    padding: 5px;
+    color: rgb(93, 25, 25);
+}
+.input_board_name_label, .input_board_color_label, .modal_window label{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    margin: 10px;
+}
+
+.btn_wrapper{
+    display: flex;
+    margin-top: 50px;
+}
+.add_item_btn,.cancel_item_btn{
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 20px;
+    padding: 10px;
+    border:1px solid black;
+}
+.input_board_color{
+    background-color: #8f525254;
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.add_board_item{
+    padding: 0 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.window{
+    background-color:rgb(223, 109, 109);
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.board{
+    border-radius:10px;
+    width: 180px;
+    padding-bottom: 5px;
+    margin: 10px;
+    background-color:rgb(28, 148, 148);
+    height: 100%;
+    list-style: none;
+    
+}
+
+.board_body{
+    margin-top: 15px;
+}
+.board_header{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.board_header_name{
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+}
+
+.card_header_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card_title_item{
+    font-weight: bold;
+}
+
+.card_text_item{
+    margin-top: 8px;
+}
+.card_body_item{
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
